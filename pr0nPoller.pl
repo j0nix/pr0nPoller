@@ -208,7 +208,7 @@ sub snmp_stuff
 	if ($m =~ m/(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/) { # this regexp also matches things like 099.888.77.6, but, fuck that, just interestning if its formated as an ip
 		$ip = $m;
 	} else {
-		my $url = "calling an implementation of 'https://github.com/j0nix/j0nix-rest-api', but whatever can fetch an ip for that mac address".$m;
+		my $url = "here we craft an url calling an implementation of 'https://github.com/j0nix/j0nix-rest-api' to fetch ip for that macadress".$m;
 		$ip = &ppAPI($url); # Calling function witch above link reference. A REST call too pp-api
 		return "$m => OFFLINE" if ($ip !~ m/(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/); 
 	}	
